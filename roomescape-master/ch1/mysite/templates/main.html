@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+    <head>
+        <meta charset="utf-8">
+        <!-- 부트스트랩 모바일 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 부트스트랩 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 100) {
+                    $(".top-nav").addClass("light-header");
+                } else {
+                    $(".top-nav").removeClass("light-header");
+                }
+            });
+        </script>
+        <style>
+            body{
+                width:100%;
+             }
+            .body{
+            background-color:#171312;
+            }
+            .body>img{
+                border-bottom:1px solid white;
+            }
+
+            a{
+                text-decoration:none !important;
+            }
+            ul{
+                list-style:none;
+            }
+            .head{
+            position:absolute;
+            width:100%;
+            }
+            #hf{
+                background-color:rgb(75, 75, 75,0.5);
+                border-bottom:1px solid white;
+                padding:1% 2%;
+            }
+            #hf>.p,
+            #hf>a>li,
+            #hf>.p>a>li>p,
+            #hf>.p>a>li{
+                display:inline;
+            }
+            .p{
+                width:45%;
+                float:right !important;
+                text-align:right;
+                margin-top:1%;
+            }
+            #hf>.p>a>li>p{
+                color:white;
+                font-weight:bold;
+                display:inline;
+                margin-left:2%;
+                margin-right:2%;
+            }
+            #hf>.p>a>li>p:hover,
+            #hf>.p>a>li>p:focus{
+                color:gold;
+            }
+            .text{
+                text-align:center;
+                padding:2% 1%;
+            }
+            .text>h1{
+                color:gold;
+                font-weight:bold;
+            }
+            .text>hr{
+                width:80%;
+                border-color:white;
+            }
+            .text>h5{
+                text-align:center;
+                color:gray;
+            }
+            /* 텍스트 스타일 */
+            .tema{
+                background-color:black;
+            }
+            .tema>h1{
+                text-align:center;
+                font-weight:bold;
+                color:gold;
+                padding-top:2%;
+                margin-bottom:2%;
+            }
+            .row>.col-sm-3{
+                margin-bottom:5%;
+            }
+            .row>.col-sm-3>button{
+                width:100%;
+                font-weight:bold;
+                border:5px solid white;
+                border-radius:0.5em;
+            }
+            .attention{
+                text-align:center;
+            }
+            .attention>h1{
+                font-weight:bold;
+                margin:2% auto;
+                color:gold;
+            }
+            .attention{
+                padding-bottom:2%;
+            }
+            .location>iframe{
+                width:100%;
+                height:350px;
+            }
+            .location{
+                background-color:black;
+            }
+            footer>.fimg{
+                background-color:gold;
+                text-align:center;
+            }
+            footer{
+                background-color:#171312;
+            }
+            footer>.ftext{
+                padding:1.5%;
+            }
+            footer>.ftext>.container>p,
+            footer>.ftext>.container>a>p{
+                text-decoration:none;
+                color:gray;
+                margin-bottom:0%;
+            }
+            footer>.ftext>.container>a>p:hover,
+            footer>.ftext>.container>a>p:focus{
+                color:gold;
+            }
+            @media (max-width:426px){
+                #hf{
+                    width:100%;
+                    background-color:rgb(75, 75, 75,0.75);
+                    position:fixed;
+                    z-index:100;
+                }
+                #hf>a>li>img{
+                    width:80%;
+                    display:block;
+                    margin:2% auto 0% auto;
+                }
+                .p{
+                    width:100%;
+                    text-align:center;
+                }
+                .p>a>li>p{
+                    font-size:14px;
+                }
+                .body>img{
+                    margin-top:23%;
+                }
+                .text>h1{
+                    font-size:31px;
+                }
+                .text>h5{
+                    font-size:17px;
+                }
+                .row>.col-sm-3{
+                    width:50%;
+                }
+                .row>.col-sm-3>button{
+                    width:100%;
+                    font-weight:bold;
+                }
+                .tema>h1{
+                    margin:5% auto;
+                }
+                .attention>img{
+                    width:100%;
+                }
+                .location>iframe{
+                    width:100%;
+                    height:250px;
+                    margin-top:3%;
+                    margin-bottom:3%;
+                }
+                footer>.fimg>img{
+                    width:70%;
+                }
+                footer>.ftext>.container{
+                    padding:4%;
+                }
+            }
+            @media (max-width:376px){
+                #hf{
+                    background-color:rgb(75, 75, 75,0.75);
+                    position:fixed;
+                    z-index:100;
+                }
+                #hf>a>li>img{
+                    width:80%;
+                    display:block;
+                    margin:2% auto 0% auto;
+                }
+                .p{
+                    width:100%;
+                    text-align:center;
+                }
+                .p>a>li>p{
+                    font-size:10px;
+                }
+                .body>img{
+                    margin-top:25%;
+                }
+                .text>h1{
+                    font-size:25px;
+                }
+                .text>h5{
+                    font-size:15px;
+                }
+                .row>.col-sm-3{
+                    width:50%;
+                }
+                .row>.col-sm-3>button{
+                    width:100%;
+                    font-weight:bold;
+                }
+                .tema>h1{
+                    margin:5% auto;
+                }
+                .attention>img{
+                    width:100%;
+                }
+                .location>iframe{
+                    width:100%;
+                    height:250px;
+                    margin-top:3%;
+                    margin-bottom:3%;
+                }
+                footer>.fimg>img{
+                    width:70%;
+                }
+                footer>.ftext>.container{
+                    padding:5%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    {% load static %}
+        {% for i in info %}
+        <div class="head">
+			<ul id="hf">
+				<a href=""><li><img width="23%" src="{% static 'image/ansan_logo.png' %}"></li></a>
+				<div class="p">
+					<a href=""><li><p>회사소개</p></li></a>
+					<a href=""><li><p>방소개</p></li></a>
+					<a href=""><li><p>이용안내</p></li></a>
+					<a href=""><li><p>찾아오시는길</p></li></a>
+					<a href=""><li><p>문의하기</p></li></a>
+				</div>
+			</ul>
+		</div>
+        <div class="body">
+			<img width="100%" src="{% static 'image/banner.jpg' %}">
+			<div class="text">
+				<h1>주어진 60분의 시간, 당신의 추리력으로 탈출하라!</h1>
+				<hr>
+				<h5>루트이스케이프 안산은 실제상황으로 연출된 방에 들어가 테마에 맞는 주인공이 되어 탈출하는 오프라인 방탈출 게임입니다.</h5>
+			</div>
+			<div class="tema">
+				<h1>테마룸 예약하기</h1>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3">
+							<img width="100%" src="{% static 'image/tema1.jpg' %}">
+							<button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+						<div class="col-sm-3">
+							<img width="100%" src="{% static 'image/tema2.jpg' %}">
+                            <button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+						<div class="col-sm-3">
+							<img width="100%" src="{% static 'image/tema3.jpg' %}">
+                            <button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+						<div class="col-sm-3">
+							<img width="100%" src="{% static 'image/tema4.jpg' %}">
+                            <button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+                            <img width="100%" src="{% static 'image/tema5.jpg' %}">
+                            <button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+						<div class="col-sm-3">
+                            <img width="100%" src="{% static 'image/tema6.jpg' %}">
+                            <button type="button" class="btn btn-outline-light">BOOKING</button>
+						</div>
+						<div class="col-sm-3">
+                            <img width="100%" src="{% static 'image/tema7.jpg' %}">
+						</div>
+						<div class="col-sm-3">
+                            <img width="100%" src="{% static 'image/temanone.jpg' %}">
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="attention">
+                <h1>주의사항</h1>
+                <img width="60%" src="{% static 'image/notice.png' %}">
+            </div>
+            <div class="location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.0350436962294!2d126.83553131516025!3d37.31799757984526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6f1b1242f621%3A0xbbce186f0a7120a6!2z66Oo7Yq47JWI7IKw7KCQ!5e0!3m2!1sko!2skr!4v1552637067240"frameborder="0"></iframe>
+            </div>
+		</div>
+        <footer>
+            <div class="fimg">
+                <img width="17%" src="{% static 'image/ansan_flogo.png' %}">
+                
+            </div>
+            <div class="ftext">
+                <div class="container">
+                    <p>루트이스케이프</p>
+                    <a href=""><p>경기도 안산시 단원구 고잔동 540-1번지 동원빌딩 6층</p></a>
+                    <p style="display:inline;">문의 전화 : </p><a href="tel:031-483-7474"><p style="display:inline;">031-483-7474</p></a>
+                    <p>사업자 등록번호 : 130-1314-12</p>
+                    <p>개인정보 취급방침 담당자 : 정재용</p>
+                </div>
+                
+            </div>
+        </footer>
+        {% endfor %}
+    </body>
